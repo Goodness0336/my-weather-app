@@ -1,0 +1,146 @@
+h1 {
+    color: rgba(1, 64, 136, 0.925);
+    text-align: center;
+    font-size: 40px;
+}
+
+h4 {
+    text-align: center;
+    color: rgb(232, 232, 255);
+    background-color: rgba(1, 64, 136, 0.925);
+    margin-top: 15px;
+}
+
+h5 {
+    color: rgba(1, 64, 136, 0.925);
+    font-size: 30px;
+}
+
+#date,
+#time {
+    color: rgba(1, 64, 136, 0.925);
+    font-size: 22px;
+
+}
+
+#last {
+    color: rgba(1, 64, 136, 0.925);
+    font-weight: 100px;
+}
+
+#city-name {
+    color: rgba(1, 64, 136, 0.925);
+    font-size: 35px;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bolder;
+}
+
+.container {
+    width: 790px;
+    border: 5px solid rgba(1, 64, 136, 0.925);
+    border-radius: 20px;
+    background-color: rgb(185, 133, 231);
+}
+
+.row {
+    text-align: center;
+}
+
+.weather-info {
+    color: rgba(1, 64, 136, 0.925);
+    font-size: 28px;
+}
+
+#units {
+    position: relative;
+    top: -45px;
+    color: rgba(1, 64, 136, 0.925);
+    font-size: 26px;
+
+}
+
+#celsius-unit {
+    color: rgb(87, 83, 83);
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+
+
+
+#fahrenheit-unit {
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+#first-temp {
+    color: rgba(1, 64, 136, 0.925);
+    font-size: 95px;
+
+
+}
+
+#first-icon {
+    max-width: 230px;
+    height: 150px;
+    position: relative;
+    top: -22px;
+
+
+
+
+}
+
+#search-button {
+    color: rgb(232, 232, 255);
+    background-color: rgba(1, 64, 136, 0.925);
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+#humidity {
+    color: rgba(1, 64, 136, 0.925);
+}
+
+#wind {
+    color: rgba(1, 64, 136, 0.925);
+    padding-top: 3px;
+}
+
+ul {
+    list-style: none;
+    padding-top: 1em;
+    color: rgba(1, 64, 136, 0.925);
+}
+
+li:not(:last-of-type) {
+    padding-bottom: 1em;
+}
+
+#weather-description {
+    color: rgba(1, 64, 136, 0.925);
+    font-family: "Courier New", Courier, monospace;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+h6 {
+    text-align: center;
+}
+
+.active {
+    color: rgb(87, 83, 83);
+    cursor: default;
+
+
+}
+
+.active:hover {
+    text-decoration: none;
+    color: rgb(87, 83, 83);
+    cursor: none;
+}

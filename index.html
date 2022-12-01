@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <title>Weather app</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            Weather app
+        </h1>
+        <h2>
+            <form id="search-form">
+                <div class="border p-10 mt-4 rounded shadow">
+                    <div class="row" class="border p-10 mt-4 rounded shadow">
+                        <div class="col-6">
+                            <input id="type-city" type="search" placeholder="Enter your city" autofocus="on"
+                                autocomplete="off" />
+                        </div>
+                        <div class="col-3">
+                            <input id="search-button" type="submit" value="Search" class="btn btn-primary" />
+                        </div>
+                        <div class="col-3">
+                            <input id="current-button" type="submit" value="Current 📍" class="btn btn-primary" />
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </h2>
+
+        <h3>
+            <div class="city-info">
+                <div class="weather-info">Weather in <span id="city-name"><strong>Lagos</strong><span></div>
+                <span id="last"><i>Last udpdated:</i></span> <span id="date">11 November 2022</span>
+                <div id="time">10:40am</div>
+                <div id="weather-description"><strong> Scattered clouds </strong> </div>
+                <div class="row">
+                    <div class="col-7">
+                        <span id="first-temp">27</span>
+                        <span id="units"><a href="#" id="celsius-unit" class="active">℃</a> | <a href="#"
+                                id="fahrenheit-unit">℉</a></span>
+                        <span id="clearfix weather-temperature">
+                            <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="sunny icon"
+                                id="first-icon" />
+                        </span>
+                    </div>
+                    <div class="col-5">
+                        <ul>
+                            <li>Humidity: <span id="humidity"> 70</span>%</li>
+                            <li> Wind: <span id="wind"> 5</span>km/hr</li>
+                        </ul>
+                    </div>
+                </div>
+        </h3>
+        <hr />
+        <h4>
+            Upcoming Forecast
+        </h4>
+        <hr />
+
+        <h5>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="border p-2 mt-1 rounded shadow">
+                        <div id="day">
+                            Tue</div> <span class="Tmax">26°</span> <span id="Tmin">24°</span>
+                        <div id="icon">
+                            <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="sunny icon" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="border p-2 mt-1 rounded shadow">
+                        <div id="day">
+                            Wed</div>
+                        <span class="Tmax">28°</span> <span id="Tmin">27°</span>
+                        <div id="icon">
+                            <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="sunny icon" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="border p-2 mt-1 rounded shadow">
+                        <div id="day">
+                            Thur</div>
+                        <span class="Tmax">27°</span> <span id="Tmin">25°</span>
+                        <div id="icon">
+                            <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="sunny icon" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="border p-2 mt-2 rounded shadow">
+                        <div id="day">
+                            Fri</div>
+                        <span class="Tmax">29°</span> <span id="Tmin">27°</span>
+                        <div id="icon">
+                            <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="sunny icon" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="border p-2 mt-2 rounded shadow">
+                        <div id="day">
+                            Sat</div>
+                        <span class="Tmax">30°</span> <span id="Tmin">28°</span>
+                        <div id="icon">
+                            <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="sunny icon" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="border p-2 mt-2 rounded shadow">
+                        <div id="day">
+                            Sun</div>
+                        <span id="Tmax">26°</span>
+                        <span id="Tmin">25°</span>
+                        <div id="icon">
+                            <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="sunny icon" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+    </div>
+    </h5>
+    </div>
+    <script src="script.js"></script>
+    <h6> <a href="https://github.com/Goodness0336/weather-app"><span id="code-link">Open-source code</span></a><span
+            class="name"> by Goodness Kosisochukwu</span></h6>
+</body>
+
+</html>

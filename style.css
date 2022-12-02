@@ -60,7 +60,6 @@ h5 {
 }
 
 #celsius-unit {
-    color: rgb(87, 83, 83);
     font-weight: bolder;
     text-decoration: none;
 }
@@ -135,12 +134,12 @@ h6 {
 .active {
     color: rgb(87, 83, 83);
     cursor: default;
+    
 
 
 }
 
 .active:hover {
     text-decoration: none;
-    color: rgb(87, 83, 83);
-    cursor: none;
+   
 }

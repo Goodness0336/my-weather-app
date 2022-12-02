@@ -100,15 +100,18 @@ currentLocationButton.addEventListener("click", showCurrentWeatherLocation);
 
 function showCelsiusValue(event) {
   event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
   let celsiusValue = document.querySelector("#first-temp");
   celsiusValue.innerHTML = Math.round(celsiusTemperature);
 }
 
 
 function showFahrenheitValue(event) {
-  celsiusLink.classList.remove("active");
   event.preventDefault();
   let celsiusValue = document.querySelector("#first-temp");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
   let fahrenheitValue = (celsiusTemperature * 9) / 5 + 32;
   celsiusValue.innerHTML = Math.round(fahrenheitValue);
 }

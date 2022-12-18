@@ -65,7 +65,7 @@ function displayForecast(response) {
                 <div class="col-sm-4">
                     <div class="border p-2 mt-1 rounded shadow">
                         <div id="day">
-                            ${forecastDay.dt}</div> <span class="Tmax">${forecastDay.tem.max}°</span> <span id="Tmin">${forecastDay.temp.min}°</span>
+                            ${formatDay(forecastDay.dt*1000)}</div> <span class="Tmax">${Math.round(forecastDay.temp.max)}°</span> <span id="Tmin">${Math.round(forecastDay.temp.min)}°</span>
                         <div id="icon">
                             <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="sunny icon" />
                         </div>
@@ -85,7 +85,7 @@ function displayForecast(response) {
 }
 
 function getForecast(coordinates) {
-    let apiKey = "5d0e9c3de2e1dcb8062c765f9113a5b5";
+    let apiKey = "8cd9be374c7c96c39a9fe73f4bf2f055";
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
@@ -168,12 +168,3 @@ function showFahrenheitValue(event) {
   let celsiusLink = document.querySelector("#celsius-unit");
   celsiusLink.addEventListener("click", showCelsiusValue);
   
-
-
-displayForecast();
-
-
-
-
-
- 

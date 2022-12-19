@@ -51,8 +51,6 @@ function formatDay(timestamp) {
   return days[day];
 }
 
-
-
 function displayForecast(response) {
   let forecast = response.data.daily;
 
@@ -61,28 +59,34 @@ function displayForecast(response) {
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
       forecastHTML =
-        forecastHTML + `<div class="row">
+        forecastHTML +
+        `
                 <div class="col-sm-4">
                     <div class="border p-2 mt-1 rounded shadow">
-                        <div id="day">
-                            ${formatDay(forecastDay.dt*1000)}</div> <span class="Tmax">${Math.round(forecastDay.temp.max)}°</span> <span id="Tmin">${Math.round(forecastDay.temp.min)}°</span>
+                         <div class="weather-forecast-date">${formatDay(
+                           forecastDay.dt
+                         )}</div>
+                          <span class="Tmax">${Math.round(
+                            forecastDay.temp.max
+                          )}°</span> <span id="Tmin">${Math.round(
+          forecastDay.temp.min
+        )}°</span>
                         <div id="icon">
-                            <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="sunny icon" />
+                            <img src="http://openweathermap.org/img/wn/${
+                              forecastDay.weather[0].icon
+                            }@2x.png" alt="sunny icon" />
                         </div>
                     </div>
-                </div>
-            </div>
+                
+          
             </div>`;
     }
-
-
   });
-   forecastHTML = forecastHTML + `</div>`;
-   forecastElement.innerHTML = forecastHTML;
-
-  
-  
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
+
+
 
 function getForecast(coordinates) {
     let apiKey = "8cd9be374c7c96c39a9fe73f4bf2f055";
